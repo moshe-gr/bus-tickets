@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-carusel',
@@ -7,7 +7,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CaruselComponent implements OnInit {
 
-  @Input() date:object[];
+  @Input() date;
+  @Output() newDate: EventEmitter<number> = new EventEmitter<number>();
+  prev(){
+    this.newDate.emit(this.date[0].date-(1000*60*60*24*7))
+  }
+  next(){
+    this.newDate.emit(this.date[this.date.length-1].date+(1000*60*60*24))
+  }
   
   constructor() {
    }

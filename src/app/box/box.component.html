@@ -1,11 +1,9 @@
-<a id="cbx" class="page-link" href="#">
-    <div class='text-center'>
-        {{info.date | date:"EEE,&nbsp;MMM&nbsp;dd"}}
-        <div *ngIf="info.price" class="text-orange">
-            <span class='align-middle font-weight-bold'>{{currency}}{{info.price}}</span>
-            <small class="align-top">.00</small>
-            <span class='align-middle'> +</span>
-        </div>
-        <div *ngIf="!info.price" class="text-danger">No&nbsp;information</div>
+<div id="cbx" class='text-center'>
+    {{info.date | date:"EEE,&nbsp;MMM&nbsp;dd"}}
+    <div *ngIf="info.price" class="text-orange">
+        <span class='align-middle font-weight-bold'>{{currency}}{{info.price}}</span>
+        <small class="align-top">.00</small>
+        <span class='align-middle'> +</span>
     </div>
-</a>
+    <div *ngIf="!info.price" class="text-danger">No&nbsp;information</div>
+</div>

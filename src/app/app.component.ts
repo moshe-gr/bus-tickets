@@ -13,9 +13,20 @@ export class AppComponent implements OnInit {
   carusel = [];
   table: RideData[] = [];
   dateSt: number;
-  
+  myInfo;
+
   rideInfo(myInfo): void{
+    this.myInfo = myInfo;
     this.dateSt = new Date(myInfo.dateSt).getTime();
+    this.search(this.myInfo);
+  }
+
+  prevNext(dateSt): void{
+    this.dateSt = dateSt;
+    this.search(this.myInfo);
+  }
+  
+  search(myInfo): void{
     this.carusel = [
       {date: this.dateSt,
         price: null},
@@ -47,8 +58,6 @@ export class AppComponent implements OnInit {
           }
         }
       }
-      console.log(this.carusel);
-      console.log(this.table);
       this.table = this.table.sort((a, b) => a.date - b.date);
   }
   constructor(private rideData: RideDataService){ }

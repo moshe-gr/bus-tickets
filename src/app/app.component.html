@@ -2,7 +2,7 @@
     <app-header (rideInfo)="rideInfo($event)"></app-header>
 </div>
 <div *ngIf="dateSt" class="container-fluid">
-    <app-carusel [date]="carusel"></app-carusel>
+    <app-carusel (newDate)="prevNext($event)" [date]="carusel"></app-carusel>
 </div>
 <div class="container-fluid">
     <app-info-table [tableData]="table"></app-info-table>
