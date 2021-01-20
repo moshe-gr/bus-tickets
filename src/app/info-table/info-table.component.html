@@ -1,0 +1,14 @@
+<table class="container-fluid">
+    <tr class="row border text-center">
+        <th class="col">Departyre</th>
+        <th class="col">Duration</th>
+        <th class="col">Arrival</th>
+        <th class="col">Operator<br><small>Rating</small></th>
+        <th class="col">Bus id<br><small>Features</small></th>
+        <th class="col">Price<br><small>Per person</small></th>
+        <th class="col"> </th>
+    </tr>
+    <tr *ngFor="let row of tableData">
+        <app-info-row [info]="row"></app-info-row>
+    </tr>
+</table>

@@ -1,0 +1,21 @@
+<div class='container-fluid row mb-5'>
+    <nav aria-label="...">
+        <ul class="pagination pagination-lg">
+            <li class='border px-2 text-center'>
+                &laquo;
+                <div>
+                    Last&#160;7
+                </div>
+            </li>
+            <li class="page-item" *ngFor='let i of date'>
+                <app-box [info]="i"></app-box>
+            </li>
+            <li class='border px-2 text-center'>
+                &raquo;
+                <div>
+                    Next&#160;7
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div>

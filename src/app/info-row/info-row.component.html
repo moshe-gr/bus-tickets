@@ -1,0 +1,10 @@
+<span class="border pt-2 row text-center">
+    <td class="col"><span class="font-weight-bold">{{info.date | date: "hh:mm a"}}</span><br>{{info.source}}</td>
+    <td class="col">{{dueHour+"h, "+dueMinute+"m"}}</td>
+    <td class="col"><span class="font-weight-bold">{{info.date+info.due | date: "hh:mm a"}}</span><br>{{info.dest}}</td>
+    <td class="col"><img [src]="info.operator" width="70%" height="30px"><br>*****</td>
+    <td class="col">{{info.busId}}</td>
+    <td *ngIf="!info.cheapest; else green" class="col text-orange"><span class="border-bot"><span class="align-middle font-weight-bold">{{currency}}{{info.price}}</span><small class="align-top">.00</small></span></td>
+    <ng-template #green><td class="col text-green"><span class="border-bot"><span class="align-middle font-weight-bold">{{currency}}{{info.price}}</span><small class="align-top">.00</small></span></td></ng-template>
+    <td class="col text-primary"><label>Book <input type="checkbox"></label></td>
+</span>

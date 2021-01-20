@@ -1,0 +1,14 @@
+.text-orange{
+    color: #ff6601;
+    font-size: 1.5em;
+}
+.border-bot{
+    border-bottom: 1px dashed #ff6601;
+}
+.text-green{
+    color: rgb(0, 255, 0);
+    font-size: 1.5em;
+}
+.text-green .border-bot{
+    border-bottom: 1px dashed rgb(0, 255, 0);
+}
