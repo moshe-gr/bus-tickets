@@ -7,7 +7,6 @@ import { CaruselComponent } from './carusel/carusel.component';
 import { BoxComponent } from './box/box.component';
 import { InfoTableComponent } from './info-table/info-table.component';
 import { InfoRowComponent } from './info-row/info-row.component';
-import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +15,7 @@ import { TestComponent } from './test/test.component';
     CaruselComponent,
     BoxComponent,
     InfoTableComponent,
-    InfoRowComponent,
-    TestComponent
+    InfoRowComponent
   ],
   imports: [
     BrowserModule,
